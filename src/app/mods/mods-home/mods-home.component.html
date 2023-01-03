@@ -1,2 +1,3 @@
 <app-devider>Modal Component</app-devider>
-<app-modal></app-modal>
+<button (click)="onClick()">Show Modal</button>
+<app-modal (close)="onClick()" *ngIf="isModalOpen"></app-modal>
