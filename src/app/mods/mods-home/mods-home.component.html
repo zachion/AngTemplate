@@ -1,3 +1,9 @@
 <app-devider>Modal Component</app-devider>
 <button (click)="onClick()">Show Modal</button>
-<app-modal (close)="onClick()" *ngIf="isModalOpen"></app-modal>
+<app-modal (close)="onClick()" *ngIf="isModalOpen">
+    <div modalTitle>I am a reusable title</div>
+    <p>Some content for the modal window should go right here!</p>
+    <ng-container modalFooter>
+        <button class="ui button" (click)="onClick()">Close Me!</button>
+    </ng-container>
+</app-modal>
